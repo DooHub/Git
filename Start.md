@@ -51,4 +51,4 @@ Author: DooHub <djmen76@naver.com>
 Date:   Thu Jun 27 22:08:59 2024 +0900
 
 ```
-
+### 2) git diff 바로 commit한 버전과 이전 버전 차이 확인
