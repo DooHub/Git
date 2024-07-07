@@ -70,6 +70,34 @@ git reset HEAD^ #최신 것 취소 하기
 
 git reset --hard commit ID # 해당 commit ID 이후 부분은 삭제
 
-git revert commit ID # 해당 commit ID 이후 부분은 삭제하지 않고 돌아 감
+git revert commit ID # 해당 commit ID 이후 부분은 삭제하지 않고 돌아 감, 단 떨어져 있는 commit ID로 바로 가지 못하면, 순차적으로 Revert해야 한다.
+
+$ git log rev.txt
+commit 71a90748018b5c01306efe089e3cda223da9f775 (HEAD -> master)
+Author: DooHub <djmen76@naver.com>
+Date:   Sun Jul 7 13:39:18 2024 +0900
+
+    R4
+
+commit 6fba5c0cb26ea6222ab4e2178ac4115107293191
+Author: DooHub <djmen76@naver.com>
+Date:   Sun Jul 7 13:38:29 2024 +0900
+
+    R3
+
+commit e4916ab9933c7bbef7bc3cca2da437a9bff28230
+Author: DooHub <djmen76@naver.com>
+Date:   Sun Jul 7 12:08:32 2024 +0900
+
+    R2
+
+commit 42b33302d0ac8a43d4128a104d525f66fd208266
+Author: DooHub <djmen76@naver.com>
+Date:   Sun Jul 7 12:07:44 2024 +0900
+
+    R1
+
+git revert 71a90748018b5c01306efe089e3cda223da9f775 # back to R3 (R4 commit ID)
+git revert 6fba5c0cb26ea6222ab4e2178ac4115107293191 # back to R2 (R3 commit ID)
 ```
 
