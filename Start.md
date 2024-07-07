@@ -59,3 +59,17 @@ Date:   Thu Jun 27 22:08:59 2024 +0900
 git checkout -- filename.extension
 
 ```
+### 2) State에서 되돌리기
+```
+git reset HEAD filename.extension
+```
+
+### 3) Repository에서 되될리기
+```
+git reset HEAD^ #최신 것 취소 하기
+
+git reset --hard commit ID # 해당 commit ID 이후 부분은 삭제
+
+git revert commit ID # 해당 commit ID 이후 부분은 삭제하지 않고 돌아 감
+```
+
