@@ -37,4 +37,22 @@ $ git log --oneline --branches --graph
 |/
 * d5f4572 (master) Base
 ```
+## 4)branch간 차이점 알아보기
+### git log 기준branch..비교branch : 기준 branch에는 없는 비교branch내용 표시
+```
+dusti@DESKTOP-J62GKVR MINGW64 /d/git_test/MCU (adc)
+$ git log adc..spi
+commit e57cac4d8d8c8e72075bd1af13276e581e76b1e8 (spi)
+Author: DooHub <djmen76@naver.com>
+Date:   Sun Jul 7 19:57:16 2024 +0900
 
+    spi module 1
+
+dusti@DESKTOP-J62GKVR MINGW64 /d/git_test/MCU (adc)
+$ git log spi..adc
+commit a303e231df301d74cb3bb37e6a62c465a8aa5642 (HEAD -> adc)
+Author: DooHub <djmen76@naver.com>
+Date:   Sun Jul 7 19:58:52 2024 +0900
+
+    adc mdule 1
+```
